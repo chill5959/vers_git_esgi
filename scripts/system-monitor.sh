@@ -2,6 +2,7 @@
 
 source ./config/toolkit.conf
 
+# Création du répertoire des rapports s'il n'existe pas
 mkdir -p "$REPORT_DIR"
 RAPPORT="$REPORT_DIR/system-monitor_$(date +%Y%m%d_%H%M%S).txt"
 
@@ -23,6 +24,24 @@ RAPPORT="$REPORT_DIR/system-monitor_$(date +%Y%m%d_%H%M%S).txt"
     echo "--- Charge du système ---"
     uptime
     echo
+    
+    if [ "$ALERTS_ENABLED" = "true" ]; then
+        echo "--- Alertes ---"
+
+        # Pourcentage utilisé du disque principal
+        DISQUE=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+        if [ "$DISQUE" -ge "$DISK_ALERT_THRESHOLD" ]; then
+            echo "ALERTE : disque utilisé à $DISQUE%"
+        fi
+
+        # Pourcentage de mémoire utilisée
+        MEMOIRE=$(free | awk 'NR==2 {print int($3/$2*100)}')
+        if [ "$MEMOIRE" -ge "$MEMORY_ALERT_THRESHOLD" ]; then
+            echo "ALERTE : mémoire utilisée à $MEMOIRE%"
+        fi
+        echo
+    fi
+
     echo "==========================================="
 } | tee "$RAPPORT"
 
