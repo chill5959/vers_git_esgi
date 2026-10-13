@@ -27,4 +27,4 @@ echo "Fichier : $fichier"
 echo "Erreurs : $NB_ERREURS (lignes : $LIGNES_ERREURS)"
 echo "Warnings : $NB_WARNINGS (lignes : $LIGNES_WARNINGS)"
 echo "==================="
-} >> rapport.txt
+} >> rrapport_$(date '+%Y%m%d_%H%M%S').txt
