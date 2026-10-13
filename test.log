@@ -1,0 +1,20 @@
+2026-10-13 08:00:01 INFO Démarrage du serveur
+2026-10-13 08:00:03 INFO Connexion à la base de données réussie
+2026-10-13 08:00:05 DEBUG Chargement de la configuration
+2026-10-13 08:01:12 WARNING Espace disque faible : 85% utilisé
+2026-10-13 08:02:20 INFO Utilisateur alice connecté
+2026-10-13 08:03:45 ERROR Échec de connexion pour l'utilisateur bob
+2026-10-13 08:04:10 INFO Requête GET /accueil traitée
+2026-10-13 08:05:33 WARNING Temps de réponse élevé : 2500 ms
+2026-10-13 08:06:01 DEBUG Cache vidé
+2026-10-13 08:07:18 ERROR Impossible d'ouvrir le fichier /tmp/data.csv
+2026-10-13 08:08:42 INFO Sauvegarde automatique terminée
+2026-10-13 08:09:55 WARNING Certificat SSL expire dans 10 jours
+2026-10-13 08:10:30 INFO Utilisateur alice déconnecté
+2026-10-13 08:11:02 ERROR Timeout de la connexion à la base de données
+2026-10-13 08:12:47 DEBUG Libération de la mémoire
+2026-10-13 08:13:15 INFO Redémarrage du service réseau
+2026-10-13 08:14:29 WARNING Tentative de connexion suspecte depuis 192.168.1.50
+2026-10-13 08:15:08 ERROR Erreur 500 sur la requête POST /api/commande
+2026-10-13 08:16:40 INFO Tâche planifiée exécutée
+2026-10-13 08:17:55 INFO Arrêt propre du serveur
