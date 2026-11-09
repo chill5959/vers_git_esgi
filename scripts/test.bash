@@ -1,3 +1,2 @@
 #! /bin/bash
-echo "test"
-echo "ESGI"
+echo "test2"
