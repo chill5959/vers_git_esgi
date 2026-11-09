@@ -1,3 +1,4 @@
+#! /bin/bash
 echo "Bonjour depuis github actions !"
 echo "Utilisateur : $(whoami)"
 echo "Machine : $(hostname)"
