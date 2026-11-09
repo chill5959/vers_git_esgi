@@ -1,0 +1,19 @@
+name: deploiement
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - maestro
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: self-hosted
+
+    steps:
+      - name: Recup depot
+        uses: actions/checkout@v4
+      - name: deployer
+        run: 
