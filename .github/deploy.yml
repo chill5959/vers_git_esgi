@@ -16,4 +16,4 @@ jobs:
       - name: Recup depot
         uses: actions/checkout@v4
       - name: deployer
-        run: 
+        run: scp -r ./scripts root@192.168.122.154:/var/www/git
