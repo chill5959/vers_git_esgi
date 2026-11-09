@@ -1,0 +1,5 @@
+echo "Bonjour depuis github actions !"
+echo "Utilisateur : $(whoami)"
+echo "Machine : $(hostname)"
+echo "System : $(uname)"
+echo "Date : $(date)"
