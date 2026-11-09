@@ -16,5 +16,10 @@ jobs:
       - name: Exécuter le script
         run: bash scripts/hello.sh
 
+      - name : Analyse script
+        run: ludeeus/action-shellcheck@master
+        with:
+          scandir: './scripts'
+
       - name: Fini
         run: echo "wf fini"
