@@ -1,0 +1,18 @@
+name: Premier WF
+on:
+  push:
+    branches:
+      main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      
+  name: Recupérer le dépot
+    uses: actions/checkout@v4
+  name: exec script
+    run: bash hello.sh
+  name: fini
+    run: echo "wf fini"
